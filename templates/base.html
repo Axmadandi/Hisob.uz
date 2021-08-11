@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hisob.uz</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" >
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/line-icons.css' %}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slicknav.css' %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.theme.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick-theme.css' %}" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}">
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="{% url 'main:home' %}" class="navbar-brand"><h1>www.hisob.uz</h1></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-left clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main:home' %}">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">
+                  Xizmatlar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#feature">
+                  Biz Haqimizda
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">
+                   Bizning Afzalliklar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">
+                  Narxlar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu navbar-nav">
+          <li>
+            <a class="page-scroll" href="#hero-area">
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">
+              Xizmatlar
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#feature">
+              Biz Haqimizda
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team">
+              Bizning Afzalliklar
+            </a>
+          </li>
+
+          <li>
+            <a class="page-scroll" href="#pricing">
+              Narxlar
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      
+      <!-- Hero Area End -->
+
+    </header>
+
+
+    {% block content %}
+      
+    {% endblock %}
+
+        <footer id="footer" class="footer-area section-padding">
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="footer-logo mb-3">
+                <h5 class="text-white">www.hisob.uz</h5>
+              </div>
+              <p>“Intellectual accounting system” MChJ professional buxgalteriya xizmatlarini taklif qiladi</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
+              <h3 class="footer-titel">Company</h3>
+              <ul>
+                <li class="nav-item active">
+                <a class="" href="#hero-area">
+                  Home
+                </a>
+              </li>
+                <li class="nav-item">
+                <a class="" href="#pricing">
+                  Narxlar
+                </a>
+              </li>
+                <li class="nav-item">
+                <a class="" href="#contact">
+                  Contact
+                </a>
+              </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+              <h3 class="footer-titel">About</h3>
+              <ul>
+                <li class="nav-item">
+                <a class="" href="#team">
+                   Bizning Afzalliklar
+                </a>
+              </li>
+               <li class="nav-item">
+                <a class="" href="#services">
+                  Xizmatlar
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#feature">
+                  Biz Haqimizda
+                </a>
+              </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
+              <h3 class="footer-titel">Find us on</h3>
+              <div class="social-icon">
+                <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+                <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+                <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+                <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>     
+    </footer> 
+    <!-- Footer Section End -->
+
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Axmad Fullstack Coder 2021 t.me/Web_site_makers</p>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <script>
+  if ( window.history.replaceState ) {
+   window.history.replaceState( null, null, window.location.href );
+  }
+</script>
+    <!-- End Preloader -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'assets/js/jquery-min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'assets/js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'assets/js/contact-form-script.min.js' %}"></script>
+    <script src="{% static 'assets/js/map.js' %}"></script>
+  
+      
+  </body>
+</html>
