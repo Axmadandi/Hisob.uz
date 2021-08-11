@@ -5,7 +5,6 @@ from django.urls import reverse
 class Xizmat(models.Model):
 	title = models.CharField('Nomi',max_length=150)
 	slug = models.SlugField('*',max_length=1000,unique=True)
-	img = models.ImageField('Image', upload_to='ixzmat_images/')
 	date = models.DateTimeField(auto_now=True)
 	body = models.TextField('Text')
 
