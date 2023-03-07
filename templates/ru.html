@@ -1,0 +1,565 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hisob.uz</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" >
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/line-icons.css' %}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slicknav.css' %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.theme.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick-theme.css' %}" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}">
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="{% url 'main:ru' %}" class="navbar-brand"><h1>www.hisob.uz</h1></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-left clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main:ru' %}">
+                  Дом
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">
+                  Услуги
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#feature">
+                  О нас
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">
+                  Наши преимущества
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">
+                  Цены
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                  Контакт
+                </a>
+              </li>
+                </li>
+           <li class="nav-item">
+                <a class="nav-link" href="#contact">
+                </a>
+              </li>
+        
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'main:home' %}">
+                  uz
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'main:ru' %}">
+                  ru
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="mobile-menu navbar-nav">
+          <li>
+            <a class="page-scroll" href="#hero-area">
+              Дом
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">
+              Услуги
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#feature">
+              О нас
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#team">
+              Наши преимущества
+            </a>
+          </li>
+
+          <li>
+            <a class="page-scroll" href="#pricing">
+              Стоимость услуг
+            </a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">
+              Контакт
+            </a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      
+      <!-- Hero Area End -->
+
+    </header>
+
+
+
+       <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="contents text-center">
+                <h2 class="head-title wow fadeInUp">“Intellectual accounting system” MChJ  предлагает профессиональные бухгалтерские услуги !</h2>
+                <div class="header-button wow fadeInUp" data-wow-delay="0.3s">
+                  <a href="#contact" class="btn btn-common">Контакт</a>
+                </div>
+              </div>
+              <div class="img-thumb text-center wow fadeInUp" data-wow-delay="0.6s">
+                <img class="img-fluid" src="/static/assets/img/hero-1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Header Area wrapper End -->
+
+    <!-- Services Section Start -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Услуги</h2>
+        </div>
+        <div class="row">
+          <!-- Services item -->
+          {% for xizmat in xizmatlar %}
+          <div class="col-md-6 col-lg-4 col-xs-12">
+            <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+              <div class="icon">
+                <i class="lni-pencil-alt"></i>
+              </div>
+              <div class="services-content">
+                <h3>{{xizmat.title}}</h3>
+                <p class="text-dark">{{xizmat.body}}</p><br>
+                 <div class="header-button wow fadeInUp" data-wow-delay="0.3s">
+                  <a href="#contact" class="btn btn-common">Контакт</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- Services item -->
+      
+          <!-- Services item -->
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+
+    <!-- Feature Section Start -->
+    <div id="feature">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="text-wrapper">
+              <div>
+                <h2 class="title-hl wow fadeInLeft" data-wow-delay="0.3s">О нас</h2>
+                <div class="row">
+                  <div class="col-md-9 col-sm-6">
+                    <div class="features-box wow fadeInLeft" data-wow-delay="0.3s">
+                      <div class="features-icon">
+                        <i class="lni-layers"></i>
+                      </div>
+                      <div class="features-content">
+                        <h4>
+                     главные бухгалтеры, аудиторы, консультанты, налоговые инспекторы с необходимыми знаниями и навыками. Все это подтверждено соответствующими сертификатами и дипломами. Цель нашей команды - предоставлять качественные профессиональные услуги в области бухгалтерского учета и налогообложения. Бухгалтерские услуги предоставляются на профессиональном уровне с использованием необходимых знаний и современных технологий. Благодаря рациональному распределению работы бухгалтеров по обслуживанию клиентов они могут уделять особое внимание каждому количеству данных о клиентах. Наша команда сформирована более 10 лет.
+                        </h4>
+                        <p>
+                     
+                        </p>
+                      </div>
+                    </div>
+                  </div> 
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 padding-none">
+            <div class="feature-thumb wow fadeInRight" data-wow-delay="0.3s">
+              <img src="/static/assets/img/feature/img-1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Section End -->
+
+    <!-- Team Section Start -->
+    <section id="team" class="section-padding text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header text-center">
+              <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Наши преимущества</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-8">
+            <!-- Team Item Starts -->
+            <div class="team-item text-center">
+              <div class="info-text">
+                <h3>5 причин, чтобы обратится к нам за бухгалтерскими услугами: </h3>
+                <p class="text-dark">
+                
+    Ваш бизнес недавно зарегистрирован, обороты минимальны, содержание бухгалтера в штате затратно, при этом качество учета и отчетности должно быть на высоком уровне...;
+    Ваш бухгалтер допускает серьезные ошибки, способные свести к нулю полученную прибыль;
+    В отчетный период приходящий бухгалтер (или работающий на дому) не выполняет взятые на себя обязательства;
+    Некоторые трудоемкие участки учета, по которым наиболее активно меняется законодательство, целесообразно передать нам (например расчет заработной платы и сопутствующих налогов и взносов);
+    У вас есть бухгалтер на «первичке», вам нужно лишь квалифицированно составлять отчетность</p>
+              </div>
+            </div>
+            <!-- Team Item Ends -->
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4">
+            <!-- Team Item Starts -->
+            <div class="team-item text-center">
+              <div class="info-text">
+                <h3><a href="#"> Перед наемным (штатным) бухгалтером:</a></h3>
+                <p class="text-dark">
+                 
+    
+    экономия за счет отсутствия необходимости в расходах на аренду рабочего места, постоянного повышения квалификации, стоимости программного обеспечения, требующего постоянного обновления, правовых баз, оргтехники и пр.;
+    мы не заболеем, не уйдем в отпуск, тем более в декретный, соответственно отпадает необходимость поиска замены;
+     в рамках гражданского законодательства шире права, обязанности, ответственность. </p>
+              </div>
+            </div>
+            <!-- Team Item Ends -->
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-4">
+            <!-- Team Item Starts -->
+            <div class="team-item text-center">
+              <div class="info-text">
+                <h3> Перед свободными («надомными») бухгалтерами:</h3>
+                <p class="text-dark">
+              
+    полная ответственность;
+    мы не сбежим в ответственный момент, не заболеем в отчетный период;
+    наши отношения оформляются договором</p>
+              </div>
+            </div>
+            <!-- Team Item Ends -->
+          </div>
+
+          
+          
+          <div class="col-sm-6 col-md-6 col-lg-8">
+            <!-- Team Item Starts -->
+            <div class="team-item text-center">
+              <div class="info-text">
+                <h3>Перед конкурентами:</h3>
+                <p class="text-dark">
+                
+                
+    профессионализм. В нашей команде сотрудники с сертификатами профессионального бухгалтера (САР) и аудитора, у всех высшее образование и опыт работы по специальности.
+    гибкая политика ценообразования (при отсутствии деятельности — снижение стоимости обслуживания);
+    выгодные партнерские отношения ;
+    полная конфиденциальность;
+    отсутствие перегруженности бухгалтеров (загрузка сотрудников позволяет оперативно вести учет, без ошибок, упущений. К каждому клиенту индивидуальный подход)</p>
+              </div>
+            </div>
+            <!-- Team Item Ends -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Clients Section Start -->
+    <div id="clients" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Как видно на</h2>
+        </div>
+        <div class="row text-align-">
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="/static/assets/img/clients/img1.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="/static/assets/img/clients/img2.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="0.9s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid" src="/static/assets/img/clients/img3.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-xs-12 wow fadeInUp" data-wow-delay="1.2s">
+            <div class="client-item-wrapper">
+              <img class="img-fluid"  src="/static/assets/img/clients/img4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Clients Section End -->
+
+    <!-- Testimonial Section Start -->
+  
+    <!-- Testimonial Section End -->  
+
+    <!-- Pricing section Start --> 
+    <section id="pricing" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s"> Стоимость услуг</h2>
+        </div>
+        <div class="row">
+          {% for narx in narxlar %}
+            
+        
+        <div class="col-sm-6 col-md-6 col-lg-4">
+            <!-- Team Item Starts -->
+            <div class="team-item text-center">
+              <div class="info-text">
+                <h3>{{narx.qiymati}}:</h3>
+                
+              <h5 class="text-info">{{narx.summasi}}</h5>
+              </div>
+            </div>
+            <!-- Team Item Ends -->
+          </div>{% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- Pricing Table Section End -->
+
+    <!-- Owl Slider Section Start -->
+   
+    <!-- Owl Slider Section End -->  
+
+    <!-- Subscribe Section Start -->
+    <!-- Subscribe Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="section-padding">    
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header text-center">
+              <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Контакт</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="contact-block">
+              <h2>Контакт</h2>
+            <form action="" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                    {% csrf_token %} 
+                        <div class="row">
+                          <div class="col-lg-6 col-12">
+                            <input type="text" class="form-control" name="name" placeholder="Name">
+                          </div>
+                          <div class="col-lg-6 col-12">
+                            <input type="text" class="form-control" name="tel" placeholder="Tel">
+                          </div>
+                          <div class="col-lg-12 col-12">
+                            <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
+                          </div>
+
+                          <div class="col-lg-5 mx-auto col-7">
+                            <button type="submit" class="form-control btn-common text-white" id="submit-button" name="submit">Send</button>
+                          </div>
+                        </div>
+
+                      </form>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="contact-right-area wow fadeIn">
+              <h2>Адрес</h2>
+              <div class="contact-right">
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-map-marker"></i>
+                  </div>
+                  <p> г. Ташкент Мирза Улугбекский район, улица Салар 2-тупик 16-а</p>
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-envelope"></i>
+                  </div>
+                  <p><a href="#">ias_mchj@mail.ru</a></p>
+                  
+                </div>
+                <div class="single-contact">
+                  <div class="contact-icon">
+                    <i class="lni-phone-handset"></i>
+                  </div>
+                  <p><a href="#">+998-97-7001248</a></p>
+       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+
+        <footer id="footer" class="footer-area section-padding">
+      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="footer-logo mb-3">
+                <h5 class="text-white">www.hisob.uz</h5>
+              </div>
+              <p>“Intellectual accounting system” MChJ  предлагает профессиональные бухгалтерские услуги </p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
+              <h3 class="footer-titel">Компания</h3>
+              <ul>
+                <li class="nav-item active">
+                <a class="" href="#hero-area">
+                  Дом
+                </a>
+              </li>
+                <li class="nav-item">
+                <a class="" href="#pricing">
+                  Стоимость услуг
+                </a>
+              </li>
+                <li class="nav-item">
+                <a class="" href="#contact">
+                  Контакт
+                </a>
+              </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+              <h3 class="footer-titel">O нас</h3>
+              <ul>
+                <li class="nav-item">
+                <a class="" href="#team">
+                  Наши преимущества
+                </a>
+              </li>
+               <li class="nav-item">
+                <a class="" href="#services">
+                  Услуги
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="" href="#feature">
+                  О нас
+                </a>
+              </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
+              <h3 class="footer-titel">Найти нас на</h3>
+              <div class="social-icon">
+                <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+                <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+                <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+                <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>     
+    </footer> 
+    <!-- Footer Section End -->
+
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Axmad Fullstack Coder 2021 t.me/@Web_dev_axmad</p>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+    
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <script>
+  if ( window.history.replaceState ) {
+   window.history.replaceState( null, null, window.location.href );
+  }
+</script>
+    <!-- End Preloader -->
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'assets/js/jquery-min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'assets/js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'assets/js/contact-form-script.min.js' %}"></script>
+    <script src="{% static 'assets/js/map.js' %}"></script>
+  
+      
+  </body>
+</html>

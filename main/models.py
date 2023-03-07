@@ -35,3 +35,36 @@ class Contact(models.Model):
 	class Meta:
 		verbose_name = 'Contact'
 		verbose_name_plural = 'Contactlar'
+
+class Xizmat_ru(models.Model):
+	title = models.CharField('Заголовок',max_length=150)
+	slug = models.SlugField('*',max_length=1000,unique=True)
+	date = models.DateTimeField(auto_now=True)
+	body = models.TextField('Текст')
+
+	def __str__(self):
+		return self.title
+
+
+class Narx_ru(models.Model):
+	qiymati = models.CharField('обслуживание',max_length=200)
+	summasi = models.CharField('Цена',max_length=200)
+	slug = models.SlugField('*',max_length=1000,unique=True)
+	date = models.DateTimeField(auto_now=True)
+
+
+	def __str__(self):
+		return self.qiymati
+
+
+class Contact_ru(models.Model):
+	name = models.CharField('Имя',max_length=50)
+	tel = models.CharField('Номер',max_length=50)
+	message = models.TextField('Сообщения',max_length=500)
+
+	def __str__(self):
+		return self.name
+	
+	class Meta:
+		verbose_name = 'Contact_ru'
+		verbose_name_plural = 'Contactlar_ru'

@@ -5,5 +5,6 @@ app_name = 'main'
 
 urlpatterns =[
 	path('',views.home,name='home'),
+	path('ru/',views.ru,name='ru'),
 
 ]
